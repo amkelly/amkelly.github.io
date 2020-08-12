@@ -10,9 +10,9 @@ permalink: fileio
 ## os.path and pathlib
 
 ### python.org library documentation:
- * [os.path] (https://docs.python.org/3/library/os.path.html)
- * [pathlib] (https://docs.python.org/3/library/pathlib.html#module-pathlib)
- * [glob] (https://docs.python.org/3.6/library/glob.html)
+* [os.path](https://docs.python.org/3/library/os.path.html)
+* [pathlib](https://docs.python.org/3/library/pathlib.html#module-pathlib)
+* [glob](https://docs.python.org/3.6/library/glob.html)
 
 I read about the difference between the existing os.path module and pathlib module in [this article: Why you should be using pathlib] (https://treyhunner.com/2018/12/why-you-should-be-using-pathlib/) (via [pythonbites]) and this straighforward introduction to its usage: https://jefftriplett.com/2017/pathlib-is-wonderful/
 

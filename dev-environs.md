@@ -12,6 +12,7 @@ https://packaging.python.org/guides/installing-using-pip-and-virtual-environment
 
 
 ### Dependency Management Tools & Practices:
+[(paywalled) Realpython.com course: Managing Pythong Dependencies](https://realpython.com/courses/managing-python-dependencies/) purchased in [python humble bundle](https://www.humblebundle.com/home/purchases).
 
 * pip manages installation and dependencies for installing and upgrading packages in python.
 

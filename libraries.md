@@ -11,16 +11,17 @@ A collection of the python libraries I've used and notes about their usage or pe
 
 ### regular expressions
 
-* [re docs] (https://docs.python.org/3/library/re.html)
-* [Regular Expressions in Python (realpython.com)] (https://realpython.com/regex-python/)
+* [re docs](https://docs.python.org/3/library/re.html)
+* [Regular Expressions in Python (realpython.com)](https://realpython.com/regex-python/)
 a detailed article that scaffolds a bit fast, but has a lot of detail. Useful to have the same complex topic explained twice.
 
 #### replace: 
-* [re.sub docs] (https://docs.python.org/3/library/re.html#re.sub)
-* [re.sub howto] (https://docs.python.org/3/howto/regex.html#search-and-replace) 
+* [re.sub docs](https://docs.python.org/3/library/re.html#re.sub)
+* [re.sub howto](https://docs.python.org/3/howto/regex.html#search-and-replace) 
 
 ### subproccess
-* [subprocess docs] ()
+* [subprocess docs](https://docs.python.org/3/library/subprocess.html)
+* [subprocess howto]()
 
 https://stackoverflow.com/questions/37238645/how-to-open-external-programs-in-python
 https://stackoverflow.com/questions/89228/calling-an-external-command-from-python 
