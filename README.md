@@ -8,9 +8,8 @@ I bought a recent humble bundle of python training resources here and have been 
 Working on some python exercises occasionally too on codewars.io, pythonmorsels and 
 
 ## Notes Pages:
----
 
-* [File I/O] (./fileio)
-* [Looping (draft)] (./looping)
-* [Regular Experssions] (./regex)
-* [Libraries] (./libraries)
+* [File I/O](./fileio)
+* [Looping (draft)](./looping)
+* [Regular Experssions](./regex) 
+* [Libraries](./libraries)
