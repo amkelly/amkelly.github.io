@@ -1,3 +1,7 @@
+---
+permalink: looping
+---
+
 # Looping & Lists
 
 List comprehensions

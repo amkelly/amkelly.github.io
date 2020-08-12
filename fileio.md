@@ -1,3 +1,6 @@
+---
+permalink: fileio
+---
 # File I/O
 
 ## reading & writing files

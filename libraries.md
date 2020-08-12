@@ -1,3 +1,7 @@
+---
+permalink: libraries
+---
+
 # Python Libraries & modules
 
 A collection of the python libraries I've used and notes about their usage or performance.
