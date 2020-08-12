@@ -5,7 +5,8 @@ permalink: fileio
 
 ## reading & writing files
 
- [python.org tutorial: reading & writing files] (https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files)
+ [python.org tutorial: reading & writing files](https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files)
+ [realpython.com article: Reading and Writing Files in pythong](https://realpython.com/read-write-files-python/#iterating-over-each-line-in-the-file)
 
 ## os.path and pathlib
 
@@ -21,18 +22,19 @@ When doing a simple operation like:
 
 ```
 >>> with open('workfile') as f:
-...     read_data = f.read()
+    read_data = f.read()
 ```
 
 I ran into problems as soon as I'd tried to put files in a subdirectory of my script:
 
 ``` with open('/data/workfile') as f:
-    read_data = f.read() ```
+    read_data = f.read() 
+```
 
 so, intead I ended up with this by using pathlib:
-
-``` capstone_metadata = Path('./data/capstone_metadata.txt').read_text(encoding='UTF-8') ```
-
+```
+ capstone_metadata = Path('./data/capstone_metadata.txt').read_text(encoding='UTF-8')
+```
 
 ## glob
 

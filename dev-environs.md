@@ -16,23 +16,26 @@ https://packaging.python.org/guides/installing-using-pip-and-virtual-environment
 
 * pip manages installation and dependencies for installing and upgrading packages in python.
 
-[pip docs] (https://pip.pypa.io/en/stable/)
+[pip docs](https://pip.pypa.io/en/stable/)
 
 virtual environments:
-[venv docs] (https://docs.python-guide.org/dev/virtualenvs/)
+[venv docs](https://docs.python-guide.org/dev/virtualenvs/)
 
-Appears there are two main competitors:
+Appears there are two additonal modules that make managment of pip, venvs and dependencies easier:
 
-https://pipenv.pypa.io/en/latest/
-https://python-poetry.org/
+* [pipenv](https://pipenv.pypa.io/en/latest/)
+* [python poetry](https://python-poetry.org/)
 
 Look into pip files and requirements.txt, those are parts of managing a given environment.
 
 ### python version features and support:
 
-* [python.org: status of python branches] (https://devguide.python.org/#status-of-python-branches)
+* [python.org: status of python branches](https://devguide.python.org/#status-of-python-branches)
 
-No one uses python 2, all versions of python 2 have reached end-of-life and are unsupported.
+All versions of python 2 have reached end-of-life and are unsupported.
+
+3.x releases are roughly annual in October.
+3.9 scheduled for 2020-10-05
 
 Supported versiosn of python are currently:
     * 3.6 onward

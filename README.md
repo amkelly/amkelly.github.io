@@ -13,3 +13,19 @@ Working on some python exercises occasionally too on codewars.io, pythonmorsels 
 * [Looping (draft)](./looping)
 * [Regular Experssions](./regex) 
 * [Libraries](./libraries)
+
+
+## Unsorted notes & questions:
+
+If you have a function with several arguments, it might make sense to have a list where each item is one of those arguments, how do you pass these items into the fuction?
+
+```
+def triangle_sides(a, b, c):
+    return(sum(a, b, c))
+
+triangle1 = [2, 2, 3]
+triangle2 = [3, 4, 5]
+
+```
+since the fucntion is set up to take 3 arguments, it won't accept a single argument. python won't go look inside the list to get the three variables.
+you could rewrite the function so that it accepts a library with 3 arguments though (?)
