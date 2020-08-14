@@ -37,10 +37,10 @@ All versions of python 2 have reached end-of-life and are unsupported.
 3.x releases are roughly annual in October.
 3.9 scheduled for 2020-10-05
 
-Supported versiosn of python are currently:
-    * 3.6 onward
-    * 3.8 
+Supported versions of python are currently:
+    * 3.6 -- end of life: 2021-12-23
+    * 3.8 -- end of life: 2024-10
 
 Most recent is: 3.8.5 released July 20, 2020.
 
-As of Aug 12, currently working in conda version 3.6.1, should upgrade to 3.8.x ASAP.
+As of Aug 12, currently working in conda version 3.6.1, should upgrade to 3.8.x ASAP

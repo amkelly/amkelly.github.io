@@ -53,3 +53,13 @@ def file_type_handler(f):
     else:
         print("invalid file")  
 ```
+
+There are a few optimizations to be made here:
+* glob can find files with a given extension
+* pathlib can parse a file's location and return the file's suffix:
+
+```
+>>> filelocation = '/data/file.txt'
+>>> Path(filelocation).suffix
+>>> '.txt'
+'''

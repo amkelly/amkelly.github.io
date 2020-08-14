@@ -28,6 +28,12 @@ https://stackoverflow.com/questions/89228/calling-an-external-command-from-pytho
 
 
 ## external libraries & modules
+* [requests](https://2.python-requests.org/en/master/)
+
+* [docx2text](https://github.com/ankushshah89/python-docx2txt)
+
+Installed on dev system and planning to use for some text extraction. see sabbatical/plaintext-extract.py
+
 * PDFminer.six
 
 A module for processing and handling PDF documents. I was mostly interested in its ability to extract plaintext from PDF documents for my sabbatical project. It did this well enough for general use but the original document's formatting prevents the extraction from being good enough for my purposes. 
