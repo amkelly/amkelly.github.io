@@ -10,7 +10,7 @@ permalink: regex
 * [realpython.com: Regular Expressions in python](https://realpython.com/regex-python/)
 Good to have two different explanations complex topics.
 
-re.compile:
+## re.compile:
 
 module methods 
 >    Should you use these module-level functions, or should you get the pattern and call its methods yourself? If you’re accessing a regex within a loop, pre-compiling it will save a few function calls. 
@@ -32,3 +32,8 @@ re.search() vs. re.match():
 * [python docs](https://docs.python.org/3/howto/regex.html#search-and-replace)
 
 this takes 
+
+## re.sub
+
+Takes two agruments: replacment and string.
+Working to use this to replace general text editor find and replace operations.
