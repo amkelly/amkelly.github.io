@@ -10,6 +10,11 @@ permalink: fileio
 
 ## os.path and pathlib
 
+os.path is the older set of methods for OS-independent path manipulations. Path lib provides a more structured, convienent set of methods for these manipulations. 
+
+On pathlib:
+> This module offers classes representing filesystem paths with semantics appropriate for different operating systems. Path classes are divided between pure paths, which provide purely computational operations without I/O, and concrete paths, which inherit from pure paths but also provide I/O operations. quote 
+
 ### python.org library documentation:
 * [os.path](https://docs.python.org/3/library/os.path.html)
 * [pathlib](https://docs.python.org/3/library/pathlib.html#module-pathlib)
@@ -39,6 +44,8 @@ so, intead I ended up with this by using pathlib:
 ## glob
 
 Looks like the glob library was introduced at the same time as pathlib 
+
+(and pathlib offers some of the same abstractions of file and path searching. Havne't needed to use glob in work so far. (8/28/2020))
 
 Earlier in August I wrote this code:
 
