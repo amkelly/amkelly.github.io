@@ -36,13 +36,15 @@ but that appears to be associated more with Windows understanding paths and scri
 Once I passed the arguments as a list to the subprocess module it worked:
 
 > subprocess.run(
-                args=['anystyle', '-f', 'bib', 'parse', ('.\\' + str(f))],
-                shell=True, 
-                stdout=text_contents
-                )
+>                args=['anystyle', '-f', 'bib', 'parse', ('.\\' + str(f))],
+>               shell=True, 
+>               stdout=text_contents
+>                )
 
-https://stackoverflow.com/questions/37238645/how-to-open-external-programs-in-python
-https://stackoverflow.com/questions/89228/calling-an-external-command-from-python 
+The key thing here appears, in windows, though it's a security risk, is the 'shell=True' flag, which appears to have allowed the command to be processed or run correctly by the underlying system.
+
+A couple of stackoverflow questions I referenced in working with this module [here](https://stackoverflow.com/questions/37238645/how-to-open-external-programs-in-python
+and [here](https://stackoverflow.com/questions/89228/calling-an-external-command-from-python)
 
 ### sqlite
 
