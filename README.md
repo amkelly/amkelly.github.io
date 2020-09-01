@@ -14,6 +14,14 @@ Working on some python exercises occasionally too on codewars.io, pythonmorsels 
 * [Regular Experssions](./regex) 
 * [Libraries](./libraries)
 
+## General Python Resources:
+
+### General Docs & Guides:
+
+* [Zen of Python (PEP 20)](https://www.python.org/dev/peps/pep-0020/)
+* [Real Python: How to Write Beautiful Python Code With PEP 8](https://realpython.com/python-pep8/)
+
+Article and underlying PEP look like good places to go for general style information.
 
 ## Unsorted notes & questions:
 
@@ -40,6 +48,10 @@ See: [PEP ](https://www.python.org/dev/peps/pep-0257/)
 at end of week two of my sabbatical, I see there's lots of code getting reused, I see I'm writing two scripts each of which have to open a folder and iterate over contents with a function. I likely can and should extract those sorts of functions to a module as part of later refactoring. Can and should generalize the handling of the /data directories and writing files to / from them across the whole pipeline of processing the various files etc. Again a good thing to do when refactoring the code itself. 
 
 in Sabbatical repo, most of the anystyle_helper.py file is recapitulating a slighly more complex set of processes in a previously-written script, so that 2nd one could have been much shorter, overall and reduce much of the complexity and redundancy of the second script. Would be good to make it signifigantly smaller. Worth thinking more about how to refactor and better document the code I'm writing so I am learning and adopting best practices around style and documentation as I go.
+
+### data structures:
+
+* [Real Python: Data Structures](https://realpython.com/python-data-structures/)
 
 ## Other software:
 
