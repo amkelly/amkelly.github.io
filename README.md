@@ -60,7 +60,9 @@ in Sabbatical repo, most of the anystyle_helper.py file is recapitulating a slig
 
 see realpyon overview of git [here](https://realpython.com/python-git-github-intro/) as well as the canonical, comprehensive reference & introduction to git [here](https://git-scm.com/book/en/v2)
 
-### Citation Sabbatiual Project specific software:
+
+
+### Citation Sabbatical Project specific software:
 
 The project includes, at this stage the following dependencies:
 

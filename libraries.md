@@ -60,6 +60,12 @@ worth looking into for prototyping DB schema/parsing and benchmarking/testing ag
 
 ran into problems getting the python sqlite library (ie: import sqlite3) working in anaconda on windows. Found [this](https://stackoverflow.com/questions/54876404/unable-to-import-sqlite3-using-anaconda-python) stackoverflow question which fixed issue. (copied the sqlite3 dll to C:\Users\myusername\Local\Continuum\Anaconda3\DLLs)
 
+ran into a sytax error with the following statement:
+
+> c.execute('ALTER TABLE bibtex ADD COLUMN (?, ?);', (entry, 'text'))
+
+Table names cannot be parameterized, so that won't work as above. See Stackoverflow answer [here](https://stackoverflow.com/questions/18159352/python-sqlite-near-syntax-error) 
+
 ## external libraries & modules
 * [requests](https://2.python-requests.org/en/master/)
 
