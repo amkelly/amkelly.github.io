@@ -31,12 +31,28 @@ Table names cannot be parameterized, so that won't work as above. See Stackoverf
 
 Works in a similar was as SQLite driver above. 
 
-See Microsoft documentation and quickstart guide [here](https://docs.microsoft.com/en-us/sql/connect/python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc?view=sql-server-ver15)
+See Microsoft documentation and quickstart guide [here](https://docs.microsoft.com/en-us/sql/connect/python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc?view=sql-server-ver15). Offical documentation for the library itself is [here](https://github.com/mkleehammer/pyodbc/wiki) with information about the module's objects [here](https://github.com/mkleehammer/pyodbc/wiki/Objects).
 
 The machine running the python script must have a driver installed through which pyodbc functions to send commands to the given server.
 The current version for MSSQL Server is available [here](https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver15) 
 
 More information on troubleshooting this problem was found [here](https://github.com/mkleehammer/pyodbc/wiki/Connecting-to-SQL-Server-from-Windows)
+
+* Creating an account with required permissions in MSSQL:
+
+You must creat a user and then a login, first a the server level and then a login for a given database. I changes the password policies away from the default, since my python script will not interactively changes or update it's password. 
+
+An account that creates tables in addition to read & write permissions. More information on [this](https://dba.stackexchange.com/questions/225359/sql-server-database-level-roles-for-creating-tables) Stackoverflow question and corresponding Official MS documentation [here](https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-2017).
+
+I ended up granting slightly more permissions than I might like to the login, but it only has these permissions on this database on this server. I granted: db_datawriter, db_datareader, and db_ddladmin.
+
+## Backing up / exporting the SQL Server data
+
+This is something to look into, is there an equivalent of SQLDump? Putting this file, or similar into DVC, if that seems a good route to go? Or export the SQL data as dataframe object? Is there canonical way to store such an object on disk? I think there may likely be. 
+
+(what's advantage of the SQL DB given the small size of the dataset? I guess it's interoperability with PowerBI.)
+
+SQL Server's Import & Export Wizard documentation [here](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard?view=sql-server-ver15)
 
 
 * MySQL

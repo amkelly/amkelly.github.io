@@ -23,7 +23,7 @@ Working on some python exercises occasionally too on codewars.io, pythonmorsels 
 * [Zen of Python (PEP 20)](https://www.python.org/dev/peps/pep-0020/)
 * [Real Python: How to Write Beautiful Python Code With PEP 8](https://realpython.com/python-pep8/)
 
-Article and underlying PEP look like good places to go for general style information.
+Article and underlying PEP look like good places to go for general style information. The more of a handle I get on syntax, the more it becomes clear that there is of course more than one way to do any given operation, syntactically and stylistically. Working to understand the notion of some code being more or less 'pythonic' and therefore more or less, what?, elegant?, performant?, syntactially compact? It's a notion worth continuing to think through.
 
 ## Unsorted notes & questions:
 
