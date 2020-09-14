@@ -1,5 +1,6 @@
 ---
-permalink: Databases & SQL
+title: Databases & SQL
+permalink: sql
 ---
 
 # SQL platforms:

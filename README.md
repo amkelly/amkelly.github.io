@@ -9,10 +9,12 @@ Working on some python exercises occasionally too on codewars.io, pythonmorsels 
 
 ## Notes Pages:
 
+* [Development Environments](./dev-environs)
 * [File I/O](./fileio)
 * [Looping (draft)](./looping)
 * [Regular Experssions](./regex) 
 * [Libraries](./libraries)
+* [Databases & SQL](./sql)
 
 ## General Python Resources:
 
