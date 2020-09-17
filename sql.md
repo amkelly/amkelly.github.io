@@ -5,7 +5,7 @@ permalink: sql
 
 # SQL platforms:
 
-* SQLite
+## SQLite
 
 * [python standard library docs: sqlite](https://docs.python.org/2/library/sqlite3.html)
 
@@ -25,11 +25,15 @@ ran into a sytax error with the following statement:
 
 Table names cannot be parameterized, so that won't work as above. See Stackoverflow answer [here](https://stackoverflow.com/questions/18159352/python-sqlite-near-syntax-error) 
 
-* MSSQL
+### Datatypes in SQLite:
 
-## pyodbc
+There are only 5: NULL, INTERGER, REAL, TEXT, BLOB. I've used 'text' or 'int' for all the data inputs in the python code I've written for SQLite, given the huge amount of variablility in the incoming data. See official SQLite Docs [here](https://www.sqlite.org/datatype3.html) for more information and notes below on MSSQL datatypes. 
 
-Works in a similar was as SQLite driver above. 
+## MSSQL
+
+### pyodbc
+
+Works in a similar way as SQLite driver above. 
 
 See Microsoft documentation and quickstart guide [here](https://docs.microsoft.com/en-us/sql/connect/python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc?view=sql-server-ver15). Offical documentation for the library itself is [here](https://github.com/mkleehammer/pyodbc/wiki) with information about the module's objects [here](https://github.com/mkleehammer/pyodbc/wiki/Objects).
 
@@ -38,7 +42,7 @@ The current version for MSSQL Server is available [here](https://docs.microsoft.
 
 More information on troubleshooting this problem was found [here](https://github.com/mkleehammer/pyodbc/wiki/Connecting-to-SQL-Server-from-Windows)
 
-* Creating an account with required permissions in MSSQL:
+### Creating an account with required permissions in MSSQL:
 
 You must creat a user and then a login, first a the server level and then a login for a given database. I changes the password policies away from the default, since my python script will not interactively changes or update it's password. 
 
@@ -46,7 +50,7 @@ An account that creates tables in addition to read & write permissions. More inf
 
 I ended up granting slightly more permissions than I might like to the login, but it only has these permissions on this database on this server. I granted: db_datawriter, db_datareader, and db_ddladmin.
 
-## Backing up / exporting the SQL Server data
+### Backing up / exporting the SQL Server data
 
 This is something to look into, is there an equivalent of SQLDump? Putting this file, or similar into DVC, if that seems a good route to go? Or export the SQL data as dataframe object? Is there canonical way to store such an object on disk? I think there may likely be. 
 
@@ -54,6 +58,9 @@ This is something to look into, is there an equivalent of SQLDump? Putting this 
 
 SQL Server's Import & Export Wizard documentation [here](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard?view=sql-server-ver15)
 
+### Working with column data types
+
+In initially creating the tables in the MSSQL database, I ended up just copying the datatype 'text' from SQLite without giving it much thought, but SQLite has a much smaller number of column data types and 'text' in SQLite is not equivalent to 'text' in MSSQL. 
 
 * MySQL
 
@@ -80,3 +87,21 @@ One thing I've discovered is that column cannot be dropped from a SQLite databas
 Official SQLite Documentation [here](https://www.sqlite.org/faq.html#q11) 
 
 ## SELECT
+
+## COUNT
+
+    SELECT COUNT(DISTINCT bibtex.entrytype)
+	FROM bibtex;
+
+in this case, allows me to see how many distinct entries exist in the values of the column 'entrytype'.
+
+## VARIOUS:
+
+    SELECT MAX(DATALENGTH(entrytype))
+        FROM bibtex
+
+This helped me to determine the needed length of a given column's datatype's length, mostly in case there were some major outliers I was missing. In my data set for instance, the 'title' field in the bibtex table returns a max datalength of 1982, which seems very large number of characters. The Transact SQL documentation calrifies that DATALENGTH is not the same as LEN:
+
+> Use the LEN to return the number of characters encoded into a given string expression, and DATALENGTH to return the size in bytes for a given string expression.
+
+Which brings me back to the issuses I've had with my inadvetant, poor use of data typing when I created the tables. 
