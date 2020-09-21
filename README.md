@@ -62,7 +62,11 @@ in Sabbatical repo, most of the anystyle_helper.py file is recapitulating a slig
 
 see realpyon overview of git [here](https://realpython.com/python-git-github-intro/) as well as the canonical, comprehensive reference & introduction to git [here](https://git-scm.com/book/en/v2)
 
+Thinking about how often or when to commit code to a repository. This matters less a a solo developer but this stack overflow question is a good one:
 
+[How often to commit changes to source control?](https://stackoverflow.com/questions/107264/how-often-to-commit-changes-to-source-control)
+
+along with [this](https://blog.codinghorror.com/check-in-early-check-in-often/) article that articulates some more of the ideas underlying the answers above
 
 ### Citation Sabbatical Project specific software:
 

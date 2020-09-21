@@ -2,9 +2,11 @@
 permalink: libraries
 ---
 
-# Python Libraries & modules
+# Python Standard Library, Pakcages & Modules
 
-A collection of the python libraries I've used and notes about their usage or performance.
+A collection of the python libraries I've used and notes about their usage or performance. 
+
+Real Python: [Python Modules and Packages – An Introduction]](https://realpython.com/python-modules-packages/) and [Python import: Advanced Techniques and Tips](https://realpython.com/python-import/)
 
 ## notes on the built-in/standards libraries
 (that I haven't written about elsewhere)

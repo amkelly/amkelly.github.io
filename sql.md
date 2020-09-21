@@ -60,7 +60,15 @@ SQL Server's Import & Export Wizard documentation [here](https://docs.microsoft.
 
 ### Working with column data types
 
-In initially creating the tables in the MSSQL database, I ended up just copying the datatype 'text' from SQLite without giving it much thought, but SQLite has a much smaller number of column data types and 'text' in SQLite is not equivalent to 'text' in MSSQL. 
+In initially creating the tables in the MSSQL database, I ended up just copying the datatype 'text' from SQLite without giving it much thought, but SQLite has a much smaller number of column data types and 'text' in SQLite is not equivalent to 'text' in MSSQL.  (In fact, 'text' is being deprecated in future versions of MSSQL Server. See documentation [here](https://docs.microsoft.com/en-us/sql/t-sql/data-types/ntext-text-and-image-transact-sql?view=sql-server-ver15)) It is being replaced with varchar(max), that holds text objects of the same size as the 'text' data type. [This](https://www.mssqltips.com/sqlservertip/4485/comparison-of-the-varcharmax-and-varcharn-sql-server-data-types/) article provides a good summary of the difference between and tradeoffs in using varchar(1-8000) and varchar(max).
+
+Documentation on numeric types (INT, etc) [here]() and datetime types [here]()
+
+One of the difficult things to determine in making a table (with it's corresponding Data Definition) is of course determining how best of use the given data types, especially in cases like varchar where you must declare a maximum length for the values in the given data you'll be inputting. For example, I don't know the maximum length of an article title or a person's name in the data I'm loading into the database, so I should take a guess as to a reasonable maximum. 
+
+### Primary & Foreign Keys
+
+Documentation on Primary Key creation [here](https://docs.microsoft.com/en-us/sql/relational-databases/tables/create-primary-keys?view=sql-server-ver15)
 
 * MySQL
 
@@ -87,6 +95,10 @@ One thing I've discovered is that column cannot be dropped from a SQLite databas
 Official SQLite Documentation [here](https://www.sqlite.org/faq.html#q11) 
 
 ## SELECT
+
+## UPDATE 
+
+
 
 ## COUNT
 
