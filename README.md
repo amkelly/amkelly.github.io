@@ -15,6 +15,7 @@ Working on some python exercises occasionally too on codewars.io, pythonmorsels 
 * [Regular Experssions](./regex) 
 * [Libraries](./libraries)
 * [Databases & SQL](./sql)
+* [Lists](./lists)
 
 ## General Python Resources:
 
