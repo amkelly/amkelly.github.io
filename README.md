@@ -27,6 +27,12 @@ Article and underlying PEP look like good places to go for general style informa
 
 ## Unsorted notes & questions:
 
+### Print:
+
+Like most other beginning developers, I use print statements often to help me to debug code as I'm writing it, though I should learn more about VS-Code's debugging and linting tools so I can get a good sense of how those work and speed up debugging.
+
+watching my code loop this morning and print out a long series of values I wondered about how much these statements slow down the actual execution of the code and found [this](https://stackoverflow.com/questions/13288185/performance-effect-of-using-print-statements-in-python-script) stack overflow answer.
+
 ### Functions:
 If you have a function with several arguments, it might make sense to have a list where each item is one of those arguments, how do you pass these items into the fuction?
 
@@ -66,7 +72,15 @@ Thinking about how often or when to commit code to a repository. This matters le
 
 [How often to commit changes to source control?](https://stackoverflow.com/questions/107264/how-often-to-commit-changes-to-source-control)
 
-along with [this](https://blog.codinghorror.com/check-in-early-check-in-often/) article that articulates some more of the ideas underlying the answers above
+along with [this](https://blog.codinghorror.com/check-in-early-check-in-often/) article that articulates some more of the ideas underlying the answers above.
+
+>  "You commit when you have reached a codebase state you want to remember."
+
+and
+
+> "I like to think of coding as rock climbing in this context. You climb a bit, and then you put an anchor in the rock. Should you ever fall, the last anchor you planted is the point that secures you, so you'll never fall more than a few meters. Same with source control; you code a bit, and when you reach a somewhat stable position, you commit a revision. "
+
+Quotes above from this other SO question here[here](https://softwareengineering.stackexchange.com/questions/83837/when-to-commit-code)
 
 ### Citation Sabbatical Project specific software:
 

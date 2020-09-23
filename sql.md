@@ -42,6 +42,18 @@ The current version for MSSQL Server is available [here](https://docs.microsoft.
 
 More information on troubleshooting this problem was found [here](https://github.com/mkleehammer/pyodbc/wiki/Connecting-to-SQL-Server-from-Windows)
 
+### Cursors
+
+Not entirely related to pyodbc above, but since it's the software that is helping me to create and use cursors in the database, I'll put notes on that here.
+
+In starting to read up on the follow error message:
+from code where I was looping through a results set and in that loop I was also trying to update an entire table. This caused problems where the first SELECT statement wasn't working, nor the UPDATE within the loop. [This answer](https://stackoverflow.com/a/38819537/13906097) gave me a hint that I was having problems with the cursors. 
+
+[From this page of documentation](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/cursors-transact-sql?view=sql-server-ver15):
+>  Opening a cursor on a result set allows processing the result set one row at a time. You can assign a cursor to a variable or parameter with a cursor data type.
+
+So, it seems that I'd want to user a cursor to loop over a results set I'm getting with a SELECT query. 
+
 ### Creating an account with required permissions in MSSQL:
 
 You must creat a user and then a login, first a the server level and then a login for a given database. I changes the password policies away from the default, since my python script will not interactively changes or update it's password. 
@@ -62,7 +74,7 @@ SQL Server's Import & Export Wizard documentation [here](https://docs.microsoft.
 
 In initially creating the tables in the MSSQL database, I ended up just copying the datatype 'text' from SQLite without giving it much thought, but SQLite has a much smaller number of column data types and 'text' in SQLite is not equivalent to 'text' in MSSQL.  (In fact, 'text' is being deprecated in future versions of MSSQL Server. See documentation [here](https://docs.microsoft.com/en-us/sql/t-sql/data-types/ntext-text-and-image-transact-sql?view=sql-server-ver15)) It is being replaced with varchar(max), that holds text objects of the same size as the 'text' data type. [This](https://www.mssqltips.com/sqlservertip/4485/comparison-of-the-varcharmax-and-varcharn-sql-server-data-types/) article provides a good summary of the difference between and tradeoffs in using varchar(1-8000) and varchar(max).
 
-Documentation on numeric types (INT, etc) [here]() and datetime types [here]()
+Documentation on numeric types (INT, etc) [here](https://docs.microsoft.com/en-us/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql?view=sql-server-ver15) and datetime types [here](https://docs.microsoft.com/en-us/sql/t-sql/data-types/datetime-transact-sql?view=sql-server-ver15)
 
 One of the difficult things to determine in making a table (with it's corresponding Data Definition) is of course determining how best of use the given data types, especially in cases like varchar where you must declare a maximum length for the values in the given data you'll be inputting. For example, I don't know the maximum length of an article title or a person's name in the data I'm loading into the database, so I should take a guess as to a reasonable maximum. 
 
