@@ -18,7 +18,10 @@ The following code sample from [this page](https://thispointer.com/python-get-nu
         count += len(listElem)                    
     print('Total Number of elements : ', count)
 
+
 This helped point me toward my own code where i wanted to could the longest list in a list of lists in database_load.py
+
+
         max = 0
         for e in authors_column:
             if len(e) > 13:
@@ -26,4 +29,15 @@ This helped point me toward my own code where i wanted to could the longest list
             if max <= len(e): max = len(e)
         print(max)
 
+
 Which additionally, prints particularly long entries, so I can see if there are problems with the underlying data.    
+
+
+and then I decided to pad the lists so all the lists would be the same length, this is useful often with bad data in pandas:
+
+
+    #pad lists so they're all the same length.
+    for f in reworked_column:
+        while len(f) < max:
+            f.append(None)
+    '''
