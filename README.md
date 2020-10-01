@@ -28,6 +28,11 @@ Article and underlying PEP look like good places to go for general style informa
 
 ## Unsorted notes & questions:
 
+### Variables & Assignment:
+
+[This article](https://treyhunner.com/2018/03/tuple-unpacking-improves-python-code-readability/) on multi-assignment and tuple packing/unpacking is very detailed and interesting. Seems like a very good feature of the language, especially beyond tuples such as:
+    (a, b) = (b, a)
+
 ### Print:
 
 Like most other beginning developers, I use print statements often to help me to debug code as I'm writing it, though I should learn more about VS-Code's debugging and linting tools so I can get a good sense of how those work and speed up debugging.
@@ -45,8 +50,8 @@ triangle1 = [2, 2, 3]
 triangle2 = [3, 4, 5]
 
 ```
-since the fucntion is set up to take 3 arguments, it won't accept a single argument. python won't go look inside the list to get the three variables.
-you could rewrite the function so that it accepts a library with 3 arguments though (?). I believe you can use the function's docstring to help document what the incoming parameter's of a function are.
+since the fucntion is set up to take 3 arguments, it won't accept a single argument.
+you could rewrite the function so that it accepts a list or tuple with 3 items though. I believe you can use the function's docstring to help document what the incoming parameter's of a function are.
 
 * Functions and Docstings:
 
