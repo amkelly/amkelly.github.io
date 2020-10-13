@@ -26,6 +26,12 @@ Working on some python exercises occasionally too on codewars.io, pythonmorsels 
 
 Article and underlying PEP look like good places to go for general style information. The more of a handle I get on syntax, the more it becomes clear that there is of course more than one way to do any given operation, syntactically and stylistically. Working to understand the notion of some code being more or less 'pythonic' and therefore more or less, what?, elegant?, performant?, syntactially compact? It's a notion worth continuing to think through.
 
+* [Python Code Cleanup for beginners] (https://imankulov.name/posts/python-cleanup/)
+
+Seems to have a number of good suggestions on style, readability and maintainability. 
+
+* [Exceptions as flow control](https://blog.cerebralab.com/Exceptions_as_control_flow)
+
 ## Unsorted notes & questions:
 
 ### Variables & Assignment:
@@ -67,3 +73,7 @@ in Sabbatical repo, most of the anystyle_helper.py file is recapitulating a slig
 
 * [Real Python: Data Structures](https://realpython.com/python-data-structures/)
 
+#### dictionaries: 
+
+* [Real Python: Data Structures: Dictionaries](https://realpython.com/python-data-structures/#dictionaries-maps-and-hash-tables)
+* [Official Python Docs](https://docs.python.org/3.8/tutorial/datastructures.html#dictionaries)

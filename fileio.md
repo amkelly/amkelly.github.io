@@ -13,7 +13,7 @@ permalink: fileio
 os.path is the older set of methods for OS-independent path manipulations. Path lib provides a more structured, convienent set of methods for these manipulations. 
 
 On pathlib:
-> This module offers classes representing filesystem paths with semantics appropriate for different operating systems. Path classes are divided between pure paths, which provide purely computational operations without I/O, and concrete paths, which inherit from pure paths but also provide I/O operations. quote 
+> This module offers classes representing filesystem paths with semantics appropriate for different operating systems. Path classes are divided between pure paths, which provide purely computational operations without I/O, and concrete paths, which inherit from pure paths but also provide I/O operations. 
 
 ### python.org library documentation:
 * [os.path](https://docs.python.org/3/library/os.path.html)

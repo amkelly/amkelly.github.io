@@ -8,6 +8,9 @@ A collection of the python libraries I've used and notes about their usage or pe
 
 Real Python: [Python Modules and Packages – An Introduction]](https://realpython.com/python-modules-packages/) and [Python import: Advanced Techniques and Tips](https://realpython.com/python-import/)
 
+
+[Python built-ins worth knowing about](https://treyhunner.com/2019/05/python-builtins-worth-learning/) - Seems a very good starting point to explain many of python's built in funtions and organized well to scaffold your knowledge by starting with commonly used functions then moving on to useful and subsequently more complex features.
+
 ## notes on the built-in/standards libraries
 (that I haven't written about elsewhere)
 

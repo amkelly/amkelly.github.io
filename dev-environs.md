@@ -6,7 +6,14 @@ permalink: dev-environs
 Managing dependencies, python versions and the machine you're developing on which may differ vs. the machine code is deployed to. Important when considering need to maintain code.
 
 ## Reading:
- * VS Code documentation: [general python tutorial] (https://code.visualstudio.com/docs/python/python-tutorial) and [python environments docs] (https://code.visualstudio.com/docs/python/environments )
+ * VS Code documentation: 
+ 
+ [general python tutorial] (https://code.visualstudio.com/docs/python/python-tutorial) 
+ 
+  and [python environments docs] (https://code.visualstudio.com/docs/python/environments )
+
+[realpython podcast expisode about using VSCode for python development](https://realpython.com/podcasts/rpp/28/)
+
 
 https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment
 
@@ -27,6 +34,8 @@ Appears there are two additonal modules that make managment of pip, venvs and de
 * [python poetry](https://python-poetry.org/)
 
 Look into pip files and requirements.txt, those are parts of managing a given environment.
+
+See pip docs on requirements.txt [here](https://pip.pypa.io/en/stable/user_guide/#requirements-files)
 
 ### python version features and support:
 

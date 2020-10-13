@@ -82,6 +82,14 @@ One of the difficult things to determine in making a table (with it's correspond
 
 Documentation on Primary Key creation [here](https://docs.microsoft.com/en-us/sql/relational-databases/tables/create-primary-keys?view=sql-server-ver15)
 
+### The transaction log for database 'capstone_cites' is full due to 'LOG_BACKUP'. (9002) (SQLExecDirectW)")
+
+I uncountered this error 
+
+It lead to a number of other documents and reading up a bit on the transaction log in MS SQL and a number of other related areas of the SQL Server's configuration and maintence. 
+
+IT did not have any useful alternatives so I worked to follow [these](https://inapp.com/delete-sql-server-database-transaction-log-file/) instructions to delete the transation log file so that I can then back it up and subscquently limit the new file's size in the future. 
+
 * MySQL
 
 Not used in current Sabbatical project, but widely used DB in many other applications and other organizations. 

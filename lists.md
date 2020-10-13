@@ -41,3 +41,7 @@ and then I decided to pad the lists so all the lists would be the same length, t
         while len(f) < max:
             f.append(None)
     '''
+
+## Linked Lists
+
+https://realpython.com/courses/working-linked-lists-python/
