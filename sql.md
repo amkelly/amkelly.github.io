@@ -56,7 +56,7 @@ So, it seems that I'd want to user a cursor to loop over a results set I'm getti
 
 ### Creating an account with required permissions in MSSQL:
 
-You must creat a user and then a login, first a the server level and then a login for a given database. I changes the password policies away from the default, since my python script will not interactively changes or update it's password. 
+You must create a user and then a login, first a the server level and then a login for a given database. I changes the password policies away from the default, since my python script will not interactively changes or update it's password. 
 
 An account that creates tables in addition to read & write permissions. More information on [this](https://dba.stackexchange.com/questions/225359/sql-server-database-level-roles-for-creating-tables) Stackoverflow question and corresponding Official MS documentation [here](https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-2017).
 
@@ -118,7 +118,42 @@ Official SQLite Documentation [here](https://www.sqlite.org/faq.html#q11)
 
 ## UPDATE 
 
+## ORDER BY
 
+See MSSQL Documentation [here](https://docs.microsoft.com/en-us/sql/t-sql/queries/select-order-by-clause-transact-sql?view=sql-server-ver15#examples)
+
+My main problem is typing "ORDERBY" and not "ORDER BY" this is otherwise straightforward. 
+
+## CASE
+
+Allows for some conditional logic in SQL statements. See MS SQL documentation [here](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/case-transact-sql?view=sql-server-ver15)
+
+See also [IIF](https://docs.microsoft.com/en-us/sql/t-sql/functions/logical-functions-iif-transact-sql?view=sql-server-ver15)
+
+In this example I'm turning semester and year fields into more complex and useful 'Academic Year' and 'semesterOrder' fields:
+
+    SELECT semester, year, AcademicYear =
+        CASE semester
+            WHEN 'Fall' THEN CONCAT(year, '-', RIGHT((CAST(year AS INT) + 1), 2))
+            WHEN 'Spring' THEN CONCAT((CAST(year AS INT) - 1), '-', RIGHT(year, 2))
+            WHEN 'Summer' THEN CONCAT((CAST(year AS INT) - 1), '-', RIGHT(year, 2))
+        END,
+        semesterOrder = 
+        CASE semester
+            WHEN 'Fall' THEN CONCAT(year, '-', RIGHT((CAST(year AS INT) + 1), 2), '_01-Fall')
+            WHEN 'Spring' THEN CONCAT((CAST(year AS INT) - 1), '-', RIGHT(year, 2), '_02-Spring')
+            WHEN 'Summer' THEN CONCAT((CAST(year AS INT) - 1), '-', RIGHT(year, 2), '_03-Summer')
+        END
+    FROM capst_meta
+    ORDER BY semesterOrder
+
+result:
+    semester	year	AcademicYear	semesterOrder
+    Fall	2010	2010-11	2010-11_01-Fall
+    Spring	2011	2010-11	2010-11_02-Spring
+    Fall	2011	2011-12	2011-12_01-Fall
+
+This also makes use of the [RIGHT](https://docs.microsoft.com/en-us/sql/t-sql/functions/right-transact-sql?view=sql-server-ver15), [CAST](), and [CONCAT]() functions in MSSQL.
 
 ## COUNT
 
@@ -136,4 +171,4 @@ This helped me to determine the needed length of a given column's datatype's len
 
 > Use the LEN to return the number of characters encoded into a given string expression, and DATALENGTH to return the size in bytes for a given string expression.
 
-Which brings me back to the issuses I've had with my inadvetant, poor use of data typing when I created the tables. 
+Which brings me back to the issuses I've had with my inadvertant, poor use of data typing when I created the tables. 
