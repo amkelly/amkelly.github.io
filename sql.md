@@ -153,7 +153,7 @@ result:
     Spring	2011	2010-11	2010-11_02-Spring
     Fall	2011	2011-12	2011-12_01-Fall
 
-This also makes use of the [RIGHT](https://docs.microsoft.com/en-us/sql/t-sql/functions/right-transact-sql?view=sql-server-ver15), [CAST](), and [CONCAT]() functions in MSSQL.
+This also makes use of the [RIGHT](https://docs.microsoft.com/en-us/sql/t-sql/functions/right-transact-sql?view=sql-server-ver15), [CAST](https://docs.microsoft.com/en-us/sql/t-sql/functions/cast-and-convert-transact-sql?view=sql-server-ver15), and [CONCAT]() functions in MSSQL.
 
 ## COUNT
 
@@ -161,6 +161,12 @@ This also makes use of the [RIGHT](https://docs.microsoft.com/en-us/sql/t-sql/fu
 	FROM bibtex;
 
 in this case, allows me to see how many distinct entries exist in the values of the column 'entrytype'.
+
+## VIEWS
+
+See MSSQL reference [here](https://docs.microsoft.com/en-us/sql/relational-databases/views/create-views?view=sql-server-ver15)
+
+PowerBI allows views to be created which show up and new tables when the data is refreshed.
 
 ## VARIOUS:
 
@@ -172,3 +178,9 @@ This helped me to determine the needed length of a given column's datatype's len
 > Use the LEN to return the number of characters encoded into a given string expression, and DATALENGTH to return the size in bytes for a given string expression.
 
 Which brings me back to the issuses I've had with my inadvertant, poor use of data typing when I created the tables. 
+
+## MSSQL Server Import Export
+
+Given the problems I had with data just dissapearing, I ought to have my own local backups.
+
+[This document](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/start-the-sql-server-import-and-export-wizard?view=sql-server-ver15#sql-server-management-studio-ssms) seems a good place to start w/r/t a few methods for doing those backups.
