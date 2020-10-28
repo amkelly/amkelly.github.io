@@ -16,6 +16,7 @@ Working on some python exercises occasionally too on codewars.io, pythonmorsels 
 * [Libraries](./libraries)
 * [Databases & SQL](./sql)
 * [Lists](./lists)
+* [Object Oriented Programming](./oop)
 
 ## General Python Resources:
 
