@@ -31,6 +31,12 @@ There are only 5: NULL, INTERGER, REAL, TEXT, BLOB. I've used 'text' or 'int' fo
 
 ## MSSQL
 
+This is the database type I'll be using for my Sabbatical project. I've run into a number of problems, espeically given my rustly knowledge of SQL, but I'm still deepening my knowledge of how the database works as well as SQL
+
+General articles & Documents:
+[MSSQL Help Docs -- SQL Functions](https://docs.microsoft.com/en-us/sql/t-sql/functions/functions?view=sql-server-ver15)
+[Specify Computer Tables in Columns](https://docs.microsoft.com/en-us/sql/relational-databases/tables/specify-computed-columns-in-a-table?view=sql-server-ver15)
+
 ### pyodbc
 
 Works in a similar way as SQLite driver above. 
@@ -118,6 +124,8 @@ Official SQLite Documentation [here](https://www.sqlite.org/faq.html#q11)
 
 ## UPDATE 
 
+I learned the hard way about using this statement without careful consideration. I did an update statement on a column without adding a where clause. This was, I see now in hindsight, an incredible rookie mistake which I have now internalized. 
+
 ## ORDER BY
 
 See MSSQL Documentation [here](https://docs.microsoft.com/en-us/sql/t-sql/queries/select-order-by-clause-transact-sql?view=sql-server-ver15#examples)
@@ -153,7 +161,7 @@ result:
     Spring	2011	2010-11	2010-11_02-Spring
     Fall	2011	2011-12	2011-12_01-Fall
 
-This also makes use of the [RIGHT](https://docs.microsoft.com/en-us/sql/t-sql/functions/right-transact-sql?view=sql-server-ver15), [CAST](https://docs.microsoft.com/en-us/sql/t-sql/functions/cast-and-convert-transact-sql?view=sql-server-ver15), and [CONCAT]() functions in MSSQL.
+This also makes use of the [RIGHT](https://docs.microsoft.com/en-us/sql/t-sql/functions/right-transact-sql?view=sql-server-ver15), [CAST](https://docs.microsoft.com/en-us/sql/t-sql/functions/cast-and-convert-transact-sql?view=sql-server-ver15), and [CONCAT]() functions in MSSQL. I'll have to expand the query above into a VIEW, possibly also adding more machine-parsable date column, if needed, so the data can be loaded as a data. Worth looking more at PowerBI's heirerarchical data features, which might be of use here, but more so with the Department > Program > Major heirerarchy. (should also distribute these notes accordingly.)
 
 ## COUNT
 
@@ -161,6 +169,17 @@ This also makes use of the [RIGHT](https://docs.microsoft.com/en-us/sql/t-sql/fu
 	FROM bibtex;
 
 in this case, allows me to see how many distinct entries exist in the values of the column 'entrytype'.
+
+I expanded this query's core idea into a view for the number of citations a given capstone entry has.
+
+    CREATE VIEW count_citations AS
+    SELECT capst_meta.uuid, COUNT(bibtex.uuid) AS cite_count
+        FROM capst_meta 
+        LEFT OUTER JOIN bibtex
+        ON capst_meta.uuid = bibtex.uuid
+        GROUP BY capst_meta.uuid
+
+This allows a core piece of data to be reterived: the number of capstone papers where 0 citations have been detected.
 
 ## VIEWS
 

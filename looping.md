@@ -4,6 +4,8 @@ permalink: looping
 
 # Looping & Lists
 
+https://treyhunner.com/2016/04/how-to-loop-with-indexes-in-python/
+
 List comprehensions
 
 Reading: 

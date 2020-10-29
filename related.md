@@ -1,5 +1,5 @@
 ---
-title:
+title: Related Software
 permalink:
 ---
 
@@ -7,16 +7,12 @@ permalink:
 
 This page is to write about software that isn't directly related to python.
 
-There's a seperate page on Databases & SQL [here](./sql)
+There's a seperate page on Databases & SQL [here](./sql) and another for [Microsoft PowerBI](./powerbi.md)
 
 
 ## IDEs, text editors
 
-
-(once I get a better grasp on it, I should be making notes about how tests & debugging work.)
-
-
-* Currently using Visual Studio Code as my IDE
+* Currently using Visual Studio Code as my IDE, not set up well for debugging or automated tests as of Sept 2020.
 
 ## git & github
 * using git for version control and github for a remote repo, though being a single developer working on one project I'm not using many of it's features.
@@ -47,10 +43,3 @@ The project includes, at this stage the following dependencies:
 
 The sabbatical project is in the first two phases is a series of processing scripts on top of these other utilities to manage files through a pipline from richtext in pdf and docx format to BibTex files. These two peices of software both seem to work very well and the project would not be possible at this scale without them.
 
-## PowerBI
-
-For my sabatical project, I'll be using PowerBI as a data visualization & dashboarding tool, since the College uses Microsoft products and Accounts, simplifying access, security and hopefully development. 
-
-Working to draft a number of different views across pages for the display of different data for the project. 
-
-[This article](https://powerbi.tips/2019/08/dynamic-visuals-using-buttons/) on using buttons in PowerBI to change what graphs or visuals are displayed is going to be helpful I think. 

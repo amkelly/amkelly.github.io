@@ -5,7 +5,7 @@ A repository for organizing and publishing notes as I work to learn and understa
 
 I bought a recent humble bundle of python training resources here and have been working my way through How to Think like a computer science.
 
-Working on some python exercises occasionally too on codewars.io, pythonmorsels and 
+Working on some python exercises occasionally too on codewars.io, [pythonmorsels] and [Reuven Lerner's Weekly Python Exercises](https://lerner.co.il)
 
 ## Notes Pages:
 
@@ -17,6 +17,9 @@ Working on some python exercises occasionally too on codewars.io, pythonmorsels 
 * [Databases & SQL](./sql)
 * [Lists](./lists)
 * [Object Oriented Programming](./oop)
+* [Test-Driven Development](./tests)
+* [Related Software](./related)
+* [PowerBI](./powerbi)
 
 ## General Python Resources:
 
@@ -42,7 +45,7 @@ Seems to have a number of good suggestions on style, readability and maintainabi
 
 ### Print:
 
-Like most other beginning developers, I use print statements often to help me to debug code as I'm writing it, though I should learn more about VS-Code's debugging and linting tools so I can get a good sense of how those work and speed up debugging.
+Like most other beginning developers, I use print statements often to help me to debug code as I'm writing it, though I should learn more about VS-Code's debugging and linting tools so I can get a good sense of how those work and speed up debugging. It is better, ultimatly to use tests where you can, instead of just print statements to debug code, especially as it gets more complex. I'm gathering notes on improving this process here: [Test-Driven Development](./tests)
 
 watching my code loop this morning and print out a long series of values I wondered about how much these statements slow down the actual execution of the code and found [this](https://stackoverflow.com/questions/13288185/performance-effect-of-using-print-statements-in-python-script) stack overflow answer.
 

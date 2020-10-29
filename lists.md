@@ -45,3 +45,7 @@ and then I decided to pad the lists so all the lists would be the same length, t
 ## Linked Lists
 
 https://realpython.com/courses/working-linked-lists-python/
+
+# Generators
+
+This is a topic I saw mentioned a lot before I really understood how applicable it was in practice.
