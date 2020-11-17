@@ -15,6 +15,17 @@ os.path is the older set of methods for OS-independent path manipulations. Path 
 On pathlib:
 > This module offers classes representing filesystem paths with semantics appropriate for different operating systems. Path classes are divided between pure paths, which provide purely computational operations without I/O, and concrete paths, which inherit from pure paths but also provide I/O operations. 
 
+There are a number of useful methods in pathlib, such as [Path.is_file()])https://docs.python.org/3/library/pathlib.html#pathlib.Path.exists() and [Path.iterdir()](https://docs.python.org/3/library/pathlib.html#pathlib.Path.iterdir) 
+
+I've also used Path.is_file() but read instructions for [Path.exists()](https://docs.python.org/3/library/pathlib.html#pathlib.Path.exists) and should be cautious I'm using the correct of these two methods since they will of course produce different outputs. This is especially true when dealing with directories containing subdirectories:
+
+    given a file tree:
+    ./subdir
+    ./file
+    file.txt
+
+where Path.exists('./file') would evaluate as True, this is telling me a course that my directory contains a folder named 'file' not a file named file. Path.is_file(./file) would return False, since it is evaluating the existence of an object and that it is a regular file, not a directory.
+
 ### python.org library documentation:
 * [os.path](https://docs.python.org/3/library/os.path.html)
 * [pathlib](https://docs.python.org/3/library/pathlib.html#module-pathlib)
@@ -66,7 +77,15 @@ There are a few optimizations to be made here:
 * pathlib can parse a file's location and return the file's suffix:
 
 ```
->>> filelocation = '/data/file.txt'
->>> Path(filelocation).suffix
->>> '.txt'
-'''
+filelocation = '/data/file.txt'
+Path(filelocation).suffix
+'.txt'
+```
+
+## copying files with shutil
+
+[Real Python: Copying files in python](https://realpython.com/working-with-files-in-python/#copying-files-in-python)
+
+[Python Docs: Shutil.copy](https://docs.python.org/3.8/library/shutil.html#shutil.copy)
+
+(see also copy2, which attempts to preserve more file metadata such as modification time and permissions)

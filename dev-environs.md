@@ -14,6 +14,7 @@ Managing dependencies, python versions and the machine you're developing on whic
 
 [realpython podcast expisode about using VSCode for python development](https://realpython.com/podcasts/rpp/28/)
 
+See notes [here](./debug) for using VS Code's debugging utilities
 
 https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment
 

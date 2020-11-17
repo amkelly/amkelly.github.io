@@ -42,6 +42,14 @@ and then I decided to pad the lists so all the lists would be the same length, t
             f.append(None)
     '''
 
+## Lists & Sets
+
+Sets are a data type similar in some ways to lists and they appear to often be used in similar ways.
+
+This Stackoverflow question: [Removing Duplicates in lists](https://stackoverflow.com/questions/7961363/removing-duplicates-in-the-lists) serves as an introduction to one use for sets & lists.
+
+Python documentation for sets [here](
+
 ## Linked Lists
 
 https://realpython.com/courses/working-linked-lists-python/

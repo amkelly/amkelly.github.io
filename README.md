@@ -75,3 +75,11 @@ in Sabbatical repo, most of the anystyle_helper.py file is recapitulating a slig
 
 * [Real Python: Data Structures: Dictionaries](https://realpython.com/python-data-structures/#dictionaries-maps-and-hash-tables)
 * [Official Python Docs](https://docs.python.org/3.8/tutorial/datastructures.html#dictionaries)
+
+#### JSON:
+
+While it's not a python data-structure, it's a common way to store and exchage data.
+
+* [python docs: JSON library](https://docs.python.org/3/library/json.html)
+
+Making use of constructing JSON files for DVC metrics by creating a dictionary which is converted to JSON using the library's json.dumps() method.
