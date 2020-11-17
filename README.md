@@ -10,6 +10,7 @@ Working on some python exercises occasionally too on codewars.io, [pythonmorsels
 ## Notes Pages:
 
 * [Development Environments](./dev-environs)
+* [Debugging, Benchmarking, and Test-Driven Development](./debug)
 * [File I/O](./fileio)
 * [Looping (draft)](./looping)
 * [Regular Experssions](./regex) 
@@ -17,7 +18,6 @@ Working on some python exercises occasionally too on codewars.io, [pythonmorsels
 * [Databases & SQL](./sql)
 * [Lists](./lists)
 * [Object Oriented Programming](./oop)
-* [Test-Driven Development](./tests)
 * [Related Software](./related)
 * [PowerBI](./powerbi)
 
@@ -42,12 +42,6 @@ Seems to have a number of good suggestions on style, readability and maintainabi
 
 [This article](https://treyhunner.com/2018/03/tuple-unpacking-improves-python-code-readability/) on multi-assignment and tuple packing/unpacking is very detailed and interesting. Seems like a very good feature of the language, especially beyond tuples such as:
     (a, b) = (b, a)
-
-### Print:
-
-Like most other beginning developers, I use print statements often to help me to debug code as I'm writing it, though I should learn more about VS-Code's debugging and linting tools so I can get a good sense of how those work and speed up debugging. It is better, ultimatly to use tests where you can, instead of just print statements to debug code, especially as it gets more complex. I'm gathering notes on improving this process here: [Test-Driven Development](./tests)
-
-watching my code loop this morning and print out a long series of values I wondered about how much these statements slow down the actual execution of the code and found [this](https://stackoverflow.com/questions/13288185/performance-effect-of-using-print-statements-in-python-script) stack overflow answer.
 
 ### Functions:
 If you have a function with several arguments, it might make sense to have a list where each item is one of those arguments, how do you pass these items into the fuction?
