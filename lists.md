@@ -57,3 +57,5 @@ https://realpython.com/courses/working-linked-lists-python/
 # Generators
 
 This is a topic I saw mentioned a lot before I really understood how applicable it was in practice.
+
+[Real Python: Generators](https://realpython.com/introduction-to-python-generators/#using-generators)

@@ -16,6 +16,12 @@ Real Python: [Python Modules and Packages – An Introduction]](https://realpyth
 
 See [fileio](./fileio) for information on pathlib, glob, open, write, etc.
 
+### difflib
+
+* [difflib docs](https://docs.python.org/3/library/difflib.html?highlight=diff#module-difflib)
+
+"Helpers for computing deltas" a library with functionality similar to *nix diff command, for comparing two files. You can also use it to compart other sets of iterable objects, such as lines within a file. The documentation for the library also says "For comparing directories and files, see also, the (filecmp)[https://docs.python.org/3/library/filecmp.html#module-filecmp]  module."
+
 ### regular expressions
 
 * [re docs](https://docs.python.org/3/library/re.html)

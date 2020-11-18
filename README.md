@@ -76,6 +76,10 @@ in Sabbatical repo, most of the anystyle_helper.py file is recapitulating a slig
 * [Real Python: Data Structures: Dictionaries](https://realpython.com/python-data-structures/#dictionaries-maps-and-hash-tables)
 * [Official Python Docs](https://docs.python.org/3.8/tutorial/datastructures.html#dictionaries)
 
+When combining value lookup in a dict with string notation, use a different kind of quote than you do for strings.
+[See this stackoverflow question: "how to do a dictionary format with f-string in python 3.6?"](https://stackoverflow.com/questions/43488137/how-to-do-a-dictionary-format-with-f-string-in-python-3-6)
+
+
 #### JSON:
 
 While it's not a python data-structure, it's a common way to store and exchage data.
