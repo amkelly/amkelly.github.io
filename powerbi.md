@@ -27,6 +27,13 @@ There's a lot of terminology used by PowerBI and I've found the terms to be a li
 * Report:
 * Visualization:
 * Page:
+* DAX & PowerQuery:
 
+Lots of functions in each for a variety of purposes but DAX and Powerquery have different applications.
+
+Found myself using PowerBI's data functions a bit more than I thought I might while working closely with the dashboarding tools. You end up having to build some logic into your data that PowerBI can use to do some of the more advanced things with display, buttons, bookmarks, etc.
+
+Important to note that the report saves that state of a lot of elements across sessiosn as a viewer and will save the state of elements upon publication. 
+For instance if you want a given page to be the first page a user of the report sees, you have to be on that page each time you publish the report. 
 
  
