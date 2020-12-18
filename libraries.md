@@ -2,6 +2,10 @@
 permalink: libraries
 ---
 
+# Using modules & libraries:
+
+On difference betweetn import modules vs. from modules import object(s) [here](https://realpython.com/python-modules-packages/#from-module_name-import-names)
+
 # Python Standard Library, Pakcages & Modules
 
 A collection of the python libraries I've used and notes about their usage or performance. 

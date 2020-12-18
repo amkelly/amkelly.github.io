@@ -70,6 +70,7 @@ in Sabbatical repo, most of the anystyle_helper.py file is recapitulating a slig
 ### data structures:
 
 * [Real Python: Data Structures](https://realpython.com/python-data-structures/)
+* [Tuple Comparison operators](https://treyhunner.com/2019/03/python-deep-comparisons-and-code-readability/#Python%E2%80%99s_comparison_operators)
 
 #### dictionaries: 
 

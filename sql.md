@@ -84,6 +84,10 @@ Documentation on numeric types (INT, etc) [here](https://docs.microsoft.com/en-u
 
 One of the difficult things to determine in making a table (with it's corresponding Data Definition) is of course determining how best of use the given data types, especially in cases like varchar where you must declare a maximum length for the values in the given data you'll be inputting. For example, I don't know the maximum length of an article title or a person's name in the data I'm loading into the database, so I should take a guess as to a reasonable maximum. 
 
+### Don't fear committment
+
+You've got to run "conn.commit()" in pyodbc to committ the changes to the database. See database_update.py or database_load.py for those entries.
+
 ### Primary & Foreign Keys
 
 Documentation on Primary Key creation [here](https://docs.microsoft.com/en-us/sql/relational-databases/tables/create-primary-keys?view=sql-server-ver15)
@@ -203,3 +207,5 @@ Which brings me back to the issuses I've had with my inadvertant, poor use of da
 Given the problems I had with data just dissapearing, I ought to have my own local backups.
 
 [This document](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/start-the-sql-server-import-and-export-wizard?view=sql-server-ver15#sql-server-management-studio-ssms) seems a good place to start w/r/t a few methods for doing those backups.
+
+Until I've found something else I have been producting a SQL file with the schema and the data as the accepted answer [here](https://serverfault.com/questions/147638/how-to-dump-a-microsoft-sql-server-database-to-a-sql-script).
